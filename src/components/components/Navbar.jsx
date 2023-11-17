@@ -2,7 +2,7 @@ import React,{useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
 import { styles} from '/src/styles';
 import { navLinks } from '/src/constants';
-import {logo, menu, close } from '/src/assets/assets';
+import {nishylogo, menu, close } from '/src/assets/assets';
 
 const Navbar = () => {
    const [setActive, setfirst] =useState('')
@@ -20,7 +20,7 @@ const Navbar = () => {
           window.scrollTo(0,0);
         }}
         >
-          <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
+          <img src={nishylogologo} alt="logo" className="w-9 h-9 object-contain" />
         </Link>
 
       </div>
