@@ -20,7 +20,7 @@ const Navbar = () => {
           window.scrollTo(0,0);
         }}
         >
-          <img src={nishylogologo} alt="logo" className="w-9 h-9 object-contain" />
+          <img src={nishylogo} alt="logo" className="w-9 h-9 object-contain" />
         </Link>
 
       </div>
