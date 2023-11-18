@@ -5,7 +5,7 @@ import { navLinks } from '/src/constants';
 import {nishylogo, menu, close } from '/src/assets/assets';
 
 const Navbar = () => {
-   const [setActive, setfirst] =useState('')
+   const [active, setActive] =useState('')
 
   return (
     <nav
@@ -20,9 +20,25 @@ const Navbar = () => {
           window.scrollTo(0,0);
         }}
         >
-          <img src={nishylogo} alt="logo" className="w-9 h-9 object-contain" />
-        </Link>
+          <img src={nishylogo} alt="nishylogo" className="w-9 h-9 object-contain" />
+          <p className="text-white text-[18px] font-bold cursor-pointer"> Farjana Ema Nishy <span className="sm:block hidden">| Software Engineer</span>
 
+          </p>
+        </Link>
+        <ul className="list-non hidden sm:flex flex-row gap-10">
+          {navLinks.map((link) =>(
+          <li
+             key ={link.id}
+             className={`${
+              active === link.title
+              ? "text-white"
+              : "text-secondary"
+             }`}
+          >
+            <a href = {`#${link.id}`}>{link.title}</a>
+          </li>
+          ))}
+        </ul>
       </div>
 
     </nav>
